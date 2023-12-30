@@ -4,7 +4,8 @@ orbs:
 
 jobs:
   resetall: # this can be any name you choose
-    executor: python/default
+    machine: # executor type
+      image: ubuntu-2004:current
     steps:
       - checkout
       - python/install-packages:
