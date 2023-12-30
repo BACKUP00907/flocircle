@@ -1,12 +1,20 @@
 version: 2.1
+orbs:
+  python: circleci/python@2.0.3
+
 jobs:
-  print-a-message:
-    docker:
-      - image: cimg/base:2022.03
+  resetall: # this can be any name you choose
+    executor: python/default
     steps:
-      - run: "echo fdg"
-​
+      - checkout
+      - python/install-packages:
+          pkg-manager: pip
+      - run:
+          name: Run tests
+          command: python resetk.py
+
 workflows:
-  my-workflow:
+  test_my_app:
     jobs:
-      - print-a-message
+      - resetall
+
