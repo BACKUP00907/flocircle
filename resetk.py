@@ -9,6 +9,6 @@ while k < len(url):
   
 
   webbrowser.open('http://www.python.org')
-  #response = requests.get(url[k])
-  #k+=1
-  #print(response.content)
+  response = requests.get(url[k])
+  k+=1
+  print(response.content)
