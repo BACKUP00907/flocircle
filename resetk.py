@@ -1,14 +1,18 @@
 print("hello world")
-import requests
-import webbrowser
+from requests_html import HTMLSession
 
 url = ["https://strmltpym1.streamlit.app/"]
 k = 0
 
 while k < len(url): 
   
+  
 
-  webbrowser.open('http://www.python.org')
-  response = requests.get(url[k])
+  session = HTMLSession()
+
+  r = session.get(url[k])
+
+  r.html.render() 
+  #response = requests.get(url[k])
   k+=1
   print(response.content)
