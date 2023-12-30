@@ -5,6 +5,6 @@ url = ["https://strmltpym1.streamlit.app/"]
 k = 0
 
 while k < len(url): 
-  response = requests.get(url[K])
+  response = requests.get(url[k])
   k+=1
   print(response.content)
