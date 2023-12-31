@@ -7,5 +7,5 @@ k = 0
 
 while k < len(url): 
   webbrowser.open(url[k])
-  time.sleep(30)
+  time.sleep(60)
   k+=1
