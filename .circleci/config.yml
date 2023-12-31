@@ -7,15 +7,12 @@ jobs:
     machine: # executor type
       image: ubuntu-2004:current
     steps:
-      - checkout
-      - update_all_soft:
-        name: softs
-        command: "sudo apt update && sudo apt upgrade" 
-      - python/install-packages:
-          pkg-manager: pip
+      - checkout 
+      #- python/install-packages:
+          #pkg-manager: pip
       - run:
           name: Run tests
-          command: python3 resetk.py
+          command: sudo apt update && sudo apt upgrade && pip install -r requirements.txt  && python3 resetk.py
 
 workflows:
   reset_st:
