@@ -4,6 +4,13 @@
 
 jobs:
   resetall: # this can be any name you choose
+    triggers:
+      - schedule:
+          cron: "30 * * * *"
+          filters:
+            branches:
+              only:
+                - main
     machine: # executor type
       image: ubuntu-2004:current
     steps:
