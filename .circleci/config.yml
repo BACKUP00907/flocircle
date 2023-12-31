@@ -17,13 +17,13 @@ jobs:
 workflows:
   version: 1
   reset_st:
-  triggers:
-      - schedule:
-          cron: "30 * * * *"
-          filters:
-            branches:
-              only:
-                - main
+    triggers:
+        - schedule:
+            cron: "30 * * * *"
+            filters:
+              branches:
+                only:
+                  - main
      
     jobs:
       - resetall
