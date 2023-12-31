@@ -15,6 +15,7 @@ jobs:
           command: sudo apt-get install chromium-browser && sudo  python3 resetk.py
 
 workflows:
+  version: 2
   reset_st:
     triggers:
       - schedule:
