@@ -19,6 +19,9 @@ workflows:
     triggers:
       - schedule:
           cron: "0 * * * *"
+          filters:
+            none
+            
     jobs:
       - resetall
 
