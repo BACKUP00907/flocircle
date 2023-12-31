@@ -12,7 +12,7 @@ jobs:
           #pkg-manager: pip
       - run:
           name: Run tests
-          command: sudo apt update && sudo apt-get install python3.8 && sudo apt-get install chromium-browser && sudo pip install setuptools --upgrade && sudo pip install -r requirements.txt  && sudo  python3 resetk.py
+          command: sudo apt update && sudo apt-get install python3.8 && sudo apt-get install chromium-browser && sudo  python3 resetk.py
 
 workflows:
   reset_st:
