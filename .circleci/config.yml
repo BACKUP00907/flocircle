@@ -4,13 +4,6 @@
 
 jobs:
   resetall: # this can be any name you choose
-    triggers:
-      - schedule:
-          cron: "30 * * * *"
-          filters:
-            branches:
-              only:
-                - main
     machine: # executor type
       image: ubuntu-2004:current
     steps:
@@ -22,10 +15,16 @@ jobs:
           command: sudo apt-get install chromium-browser && sudo  python3 resetk.py
 
 workflows:
-  version: 2
+  version: 1
   reset_st:
-    
-            
+  triggers:
+      - schedule:
+          cron: "30 * * * *"
+          filters:
+            branches:
+              only:
+                - main
+     
     jobs:
       - resetall
 
