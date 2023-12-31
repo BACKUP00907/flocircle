@@ -15,4 +15,4 @@ while k < len(url):
   r.html.render() 
   #response = requests.get(url[k])
   k+=1
-  print(response.content)
+  #print(response.content)
