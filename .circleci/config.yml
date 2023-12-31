@@ -22,7 +22,7 @@ workflows:
           filters:
             branches:
               only:
-                -main
+                - main
             
     jobs:
       - resetall
