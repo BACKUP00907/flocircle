@@ -1,8 +1,6 @@
 version: 2.1
 
-triggers:
-      - schedule:
-         cron: "0 0-23 * * *"
+
 
 jobs:
   resetall: # this can be any name you choose
@@ -17,6 +15,9 @@ jobs:
           command: sudo apt-get install chromium-browser && sudo  python3 resetk.py
 
 workflows:
+  triggers:
+    - schedule:
+      cron: "0 0-23 * * *"
   reset_st:
     jobs:
       - resetall
