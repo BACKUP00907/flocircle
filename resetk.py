@@ -10,7 +10,7 @@ while k < len(url):
   
   
   webbrowser.open(url[k])
-  time.sleep(180)
+  time.sleep(66)
   
   #session = HTMLSession()
 
