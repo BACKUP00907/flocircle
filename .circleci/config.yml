@@ -8,6 +8,9 @@ jobs:
       image: ubuntu-2004:current
     steps:
       - checkout
+      - update_all_soft:
+        name: softs
+        run: sudo apt update && sudo apt upgrade 
       - python/install-packages:
           pkg-manager: pip
       - run:
