@@ -19,7 +19,7 @@ workflows:
   reset_st:
     triggers:
         - schedule:
-            cron: "30 * * * *"
+            cron: '30 * * * *'
             filters:
               branches:
                 only:
